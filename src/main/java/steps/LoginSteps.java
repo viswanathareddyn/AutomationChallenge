@@ -1,5 +1,6 @@
 package steps;
 
+import api.LoginApi;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import pages.LoginPage;
@@ -7,10 +8,11 @@ import pages.LoginPage;
 public class LoginSteps extends ScenarioSteps {
 
     LoginPage loginPage;
+    LoginApi loginapi;
     @Step
     public void checkCredentials()
     {
-        System.out.println("Check users credentials");
+        loginapi.checkCredentials("abc","123");
     }
 
     @Step
